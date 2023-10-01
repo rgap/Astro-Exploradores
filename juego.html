@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Juego Espacial 2</title>
+    <style>
+        #canvas {
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        // Nave espacial
+        const spaceship = {
+            x: canvas.width / 2,
+            y: canvas.height - 50,
+            width: 50,
+            height: 50,
+            speed: 5
+        };
+
+        // Elementos a recolectar
+        const elements = [];
+
+        // Obstáculos móviles
+        const obstacles = [];
+
+        // Puntuación
+        let score = 0;
+
+        // Función para dibujar la nave espacial
+        function drawSpaceship() {
+            ctx.fillStyle = "white";
+            ctx.fillRect(spaceship.x, spaceship.y, spaceship.width, spaceship.height);
+        }
+
+        // Función para dibujar elementos
+        function drawElements() {
+            ctx.fillStyle = "green";
+            for (let i = 0; i < elements.length; i++) {
+                ctx.fillRect(elements[i].x, elements[i].y, 20, 20);
+            }
+        }
+
+        // Función para dibujar obstáculos
+        function drawObstacles() {
+            ctx.fillStyle = "red";
+            for (let i = 0; i < obstacles.length; i++) {
+                ctx.fillRect(obstacles[i].x, obstacles[i].y, 30, 30);
+            }
+        }
+
+        // Función para mover la nave espacial
+        // Función para mover la nave espacial
+        function moveSpaceship() {
+            window.addEventListener("keydown", function (event) {
+                switch (event.key) {
+                    case "ArrowLeft":
+                        if (spaceship.x > 0) {
+                            spaceship.x -= spaceship.speed;
+                        }
+                        break;
+                    case "ArrowRight":
+                        if (spaceship.x < canvas.width - spaceship.width) {
+                            spaceship.x += spaceship.speed;
+                        }
+                        break;
+                }
+            });
+        }
+
+
+        // Función para mover elementos y obstáculos
+        function moveObjects() {
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].y += 2; // Velocidad de los elementos hacia abajo
+                if (elements[i].y > canvas.height) {
+                    // Eliminar elementos que salen de la pantalla
+                    elements.splice(i, 1);
+                }
+            }
+
+            for (let i = 0; i < obstacles.length; i++) {
+                obstacles[i].y += 3; // Velocidad de los obstáculos hacia abajo
+                if (obstacles[i].y > canvas.height) {
+                    // Eliminar obstáculos que salen de la pantalla
+                    obstacles.splice(i, 1);
+                }
+            }
+        }
+
+        // Función para verificar colisiones
+        function checkCollisions() {
+            for (let i = 0; i < elements.length; i++) {
+                if (
+                    spaceship.x < elements[i].x + 20 &&
+                    spaceship.x + spaceship.width > elements[i].x &&
+                    spaceship.y < elements[i].y + 20 &&
+                    spaceship.y + spaceship.height > elements[i].y
+                ) {
+                    // Colisión con un elemento, aumentar la puntuación y eliminar el elemento
+                    score += 10;
+                    elements.splice(i, 1);
+                }
+            }
+
+            for (let i = 0; i < obstacles.length; i++) {
+                if (
+                    spaceship.x < obstacles[i].x + 30 &&
+                    spaceship.x + spaceship.width > obstacles[i].x &&
+                    spaceship.y < obstacles[i].y + 30 &&
+                    spaceship.y + spaceship.height > obstacles[i].y
+                ) {
+                    // Colisión con un obstáculo, reiniciar el juego
+                    alert("¡Perdiste! Tu puntuación: " + score);
+                    location.reload(); // Recargar la página para reiniciar el juego
+                }
+            }
+        }
+
+        // Función para generar elementos aleatorios
+        function generateElements() {
+            if (Math.random() < 0.02) {
+                // Generar un elemento nuevo con probabilidad del 2%
+                elements.push({
+                    x: Math.random() * canvas.width,
+                    y: 0
+                });
+            }
+        }
+
+        // Función principal del juego
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawSpaceship();
+            drawElements();
+            drawObstacles();
+            moveObjects();
+            checkCollisions();
+            generateElements();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Iniciar el juego
+        moveSpaceship();
+        gameLoop();
+    </script>
+</body>
+
+</html>

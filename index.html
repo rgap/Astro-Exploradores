@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Exploradores</title>
+    <link rel="shortcut icon" href="img/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="img/favicon.jpeg" alt="" width="auto"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Group</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home-principal">
+        <video autoplay loop muted poster="imagen_de_fallback.jpg">
+            <source src="img/home.mp4" type="video/mp4">
+        </video>
+        <h1>👋 Hey, Bienvenido a la web de <span style="color: #18b8e0;">Astro Exploradores</span> </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, cumque dolorum. Pariatur, ducimus dolorum
+            voluptatum ut, debitis autem molestias odit accusantium</p>
+        <a href="#jugar">Jugar Ahora</a>
+    </section>
+
+    <section class="section-play" id="jugar">
+        <h2 class="text-center">Jugar Juego</h2>
+        <div class="container">
+            <canvas id="my_canvas" width="700" height="600"></canvas>
+            <h3 class="barra"></h3>
+            <div>
+                <button class="boton fw-bold" id="left_btn">Izquierda</button>
+                <button class="boton fw-bold" id="fire_btn">Disparar</button>
+                <button class="boton fw-bold" id="right_btn">Derecha</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
