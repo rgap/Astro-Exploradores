@@ -8,8 +8,8 @@ function initCanvas() {
     backgroundImage.src = "";
     naveImage.src = "img/astro.png";
 
-    objectImage1.src = "img/start.png";
-    objectImage2.src = "img/start1.png";
+    objectImage1.src = "img/nave.png";
+    objectImage2.src = "img/nave2.png";
 
     var cW = ctx.canvas.width;
     var cH = ctx.canvas.height;
@@ -26,44 +26,29 @@ function initCanvas() {
     }
 
     var enemigos = [
-        new objectTemplate({ id: "enemigo 1", x: 350, y: 50, w: 30, h: 30 }),
-        new objectTemplate({ id: "enemigo 2", x: 150, y: -30, w: 50, h: 50 }),
-        new objectTemplate({ id: "enemigo 3", x: 225, y: -20, w: 30, h: 40 }),
-        new objectTemplate({ id: "enemigo 4", x: 380, y: -40, w: 60, h: 70 }),
-        new objectTemplate({ id: "enemigo 5", x: 120, y: -70, w: 30, h: 30 }),
-        new objectTemplate({ id: "enemigo 6", x: 225, y: -80, w: 50, h: 50 }),
-        new objectTemplate({ id: "enemigo 7", x: 450, y: -10, w: 50, h: 60 }),
-        new objectTemplate({ id: "enemigo 8", x: 475, y: -70, w: 60, h: 70 }),
-        new objectTemplate({ id: "enemigo 9", x: 600, y: -60, w: 30, h: 30 }),
-        new objectTemplate({ id: "enemigo 10", x: 495, y: -20, w: 50, h: 60 }),
-        new objectTemplate({ id: "enemigo 11", x: 650, y: -30, w: 50, h: 60 }),
-        new objectTemplate({ id: "enemigo 8", x: 475, y: -70, w: 60, h: 70 }),
-        new objectTemplate({ id: "enemigo 9", x: 600, y: -100, w: 30, h: 30 }),
-        new objectTemplate({ id: "enemigo 10", x: 495, y: -50, w: 50, h: 60 }),
-        new objectTemplate({ id: "enemigo 11", x: 650, y: -20, w: 50, h: 60 }),
+        new objectTemplate({ id: "enemigo 1", x: 350, y: 50, w: 80, h: 30 }),
+        new objectTemplate({ id: "enemigo 2", x: 100, y: -20, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 3", x: 225, y: -20, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 4", x: 350, y: -20, w: 80, h: 30 }),
+        new objectTemplate({ id: "enemigo 5", x: 100, y: -70, w: 80, h: 30 }),
+        new objectTemplate({ id: "enemigo 6", x: 225, y: -70, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 7", x: 350, y: -70, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 8", x: 475, y: -70, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 9", x: 600, y: -70, w: 80, h: 30 }),
+        new objectTemplate({ id: "enemigo 10", x: 475, y: -20, w: 50, h: 30 }),
+        new objectTemplate({ id: "enemigo 11", x: 600, y: -20, w: 50, h: 30 }),
 
         // Segundo grupo de enemigos
         new objectTemplate({ id: "enemigo 12", x: 100, y: -220, w: 50, h: 30, image: objectImage2 }),
         new objectTemplate({ id: "enemigo 13", x: 225, y: -220, w: 50, h: 30, image: objectImage2 }),
         new objectTemplate({ id: "enemigo 14", x: 350, y: -220, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 15", x: 150, y: -270, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 16", x: 325, y: -270, w: 50, h: 30, image: objectImage2 }),
+        new objectTemplate({ id: "enemigo 15", x: 100, y: -270, w: 80, h: 50, image: objectImage2 }),
+        new objectTemplate({ id: "enemigo 16", x: 225, y: -270, w: 50, h: 30, image: objectImage2 }),
         new objectTemplate({ id: "enemigo 17", x: 350, y: -270, w: 50, h: 30, image: objectImage2 }),
         new objectTemplate({ id: "enemigo 18", x: 475, y: -270, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 19", x: 700, y: -270, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 10", x: 495, y: -200, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 21", x: 900, y: -200, w: 50, h: 30, image: objectImage2 }),
-
-        new objectTemplate({ id: "enemigo 12", x: 90, y: -220, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 13", x: 225, y: -220, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 14", x: 350, y: -220, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 15", x: 150, y: -270, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 16", x: 325, y: -270, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 17", x: 350, y: -270, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 18", x: 475, y: -270, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 19", x: 700, y: -270, w: 80, h: 50, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 10", x: 495, y: -200, w: 50, h: 30, image: objectImage2 }),
-        new objectTemplate({ id: "enemigo 21", x: 900, y: -200, w: 50, h: 30, image: objectImage2 })
+        new objectTemplate({ id: "enemigo 19", x: 600, y: -270, w: 80, h: 50, image: objectImage2 }),
+        new objectTemplate({ id: "enemigo 10", x: 475, y: -200, w: 50, h: 30, image: objectImage2 }),
+        new objectTemplate({ id: "enemigo 21", x: 600, y: -200, w: 50, h: 30, image: objectImage2 })
     ];
 
     var renderEnemigos = function (enemyList) {
@@ -75,88 +60,91 @@ function initCanvas() {
     }
 
     function Launcher() {
-        this.y = 400,
-            this.x = cW * .5 - 25,
-            this.w = 100,
-            this.h = 100,
-            this.direccion,
-            this.bg = 'white',
-            this.misils = [];
-
-        this.gameStatus = {
-            over: false,
-            message: "",
-            fillStyle: "red",
-            font: "italic bold 36px Arial, sans-serif",
-        }
-
+        // ... (otras propiedades)
+    
         this.render = function () {
-            if (this.direccion === 'left') {
-                this.x -= 5;
-            }
-            else if (this.direccion === 'right') {
-                this.x += 5;
-            }
-            else if (this.direccion === 'downArrow') {
-                this.y += 5;
-            }
-            else if (this.direccion === 'upArrow') {
-                this.y -= 5;
-            }
-            ctx.fillStyle = this.bg;
-            ctx.drawImage(backgroundImage, 0, 0);
-            ctx.drawImage(naveImage, this.x, this.y, 50, 90);
-
+            // ... (código existente)
+    
             for (var i = 0; i < this.misils.length; i++) {
                 var m = this.misils[i];
                 ctx.fillRect(m.x, m.y -= 5, m.w, m.h);
-
-                this.hitDetect(m, i);
-
+    
+                // Detecta colisiones con naves
+                var collided = this.hitDetect(m, i);
+                if (collided) {
+                    // Elimina la nave enemiga en caso de colisión
+                    enemigos.splice(collided, 1);
+                    document.querySelector('.barra').innerHTML = enemigos[collided].id + " Destruido";
+                }
+    
                 if (m.y <= 0) {
                     this.misils.splice(i, 1);
                 }
             }
-            if (enemigos.length === 0) {
-                clearInterval(animateInterval);
-                ctx.fillStyle = 'Yellow';
-                ctx.font = this.gameStatus.font;
-                ctx.fillText('Ganaste', cW * .5 - 80, 50);
-            }
-
+    
+            // Resto del código...
         }
+    
         this.hitDetect = function (m, mi) {
             for (var i = 0; i < enemigos.length; i++) {
                 var e = enemigos[i];
-
+    
                 if (m.x <= e.x + e.w && m.x + m.w >= e.x &&
                     m.y >= e.y && m.y <= e.y + e.h) {
-                    enemigos.splice(i, 1);
-                    document.querySelector('.barra').innerHTML = e.id + " Destruido"  ;
+                    // Devuelve el índice de la nave enemiga en caso de colisión
+                    return i;
                 }
             }
+            // Devuelve -1 si no hay colisión
+            return -1;
         }
-        this.hitDetectLowerlevel = function (enemy) {
-            if (enemy.y > 550) {
-                this.gameStatus.over = true;
-                this.gameStatus.message = 'Todos los enemigos Destruidos';
-            }
-
-            if ((enemy.y < this.y + 25 && enemy.y > this.y - 25) &&
-                (enemy.x < this.x + 45 && enemy.x > this.x - 45)) {
-                this.gameStatus.over = true;
-                this.gameStatus.message = 'Perdiste el Juego';
-            }
-
-            if (this.gameStatus.over === true) {
-                clearInterval(animateInterval);
-                ctx.fillStyle = this.gameStatus.fillStyle;
-                ctx.font = this.gameStatus.font;
-
-                ctx.fillText(this.gameStatus.message, cW * .5 - 80, 50);
+    
+        // Resto del código...
+    }
+    function animate() {
+        ctx.clearRect(0, 0, cW, cH);
+        launcher.render();
+        
+        for (var i = 0; i < enemigos.length; i++) {
+            var enemy = enemigos[i];
+            ctx.drawImage(enemy.image, enemy.x, enemy.y += .5, enemy.w, enemy.h);
+            
+            if (enemy.type === 'nave2') {
+                launcher.hitDetectNave2(enemy);
+            } else {
+                launcher.hitDetectLowerlevel(enemy);
             }
         }
     }
+    
+    // Agrega una nueva función para detectar colisiones con nave2.png
+    this.hitDetectNave2 = function (enemy) {
+        // Detecta colisiones con nave2.png
+        if (enemy.y > 550) {
+            this.gameStatus.over = true;
+            this.gameStatus.message = 'Todos los enemigos Destruidos';
+        }
+    
+        if ((enemy.y < this.y + 25 && enemy.y > this.y - 25) &&
+            (enemy.x < this.x + 45 && enemy.x > this.x - 45)) {
+            // Elimina la nave enemiga en caso de colisión con nave2.png
+            var index = enemigos.indexOf(enemy);
+            if (index !== -1) {
+                enemigos.splice(index, 1);
+            }
+            this.gameStatus.over = true;
+            this.gameStatus.message = 'Perdiste el Juego';
+        }
+    
+        if (this.gameStatus.over === true) {
+            clearInterval(animateInterval);
+            ctx.fillStyle = this.gameStatus.fillStyle;
+            ctx.font = this.gameStatus.font;
+    
+            ctx.fillText(this.gameStatus.message, cW * .5 - 80, 50);
+        }
+    }
+    
     var launcher = new Launcher();
     function animate() {
         ctx.clearRect(0, 0, cW, cH);

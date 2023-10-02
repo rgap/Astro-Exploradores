@@ -3,131 +3,290 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --font-family: monospace;
+    --primary-color: #fff;
+    --secondary-color: #18b8e0;
+}
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: monospace;
-    color: #fff;
-}
-header {
-    display: flex;
-    align-items: center;
-    padding: 0 100px;
+    background: #181e3d;
+    font-family: var(--font-family);
+    color: var(--primary-color);
 }
 
-header nav {
+.video-section {
+    background: transparent;
+    width: 100%;
+    height: 100vh;
+    padding: 0 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-section header {
+    margin-top: 10px;
+}
+
+.video-section header nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav ul {
+.video-section header nav .logo {
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video-section header nav .logo img {
+    width: 90px;
+}
+
+.video-section header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-header nav ul li a {
+.video-section header nav ul li .home-links {
     text-decoration: none;
     font-size: 20px;
-    color: wheat;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-header nav ul li a:hover {
+.video-section header nav ul li .home-links:hover {
     color: #18b8e0;
 }
 
-header nav .logo {
-    width: auto;
-    border-radius: 20px;
-    display: flex;
-    align-items: flex-start;
-}
-header nav .logo img {
-    width: 100px;
-    border-radius: 20px;
-}
-.home-principal {
-    margin-top: 100px;
-    padding: 0 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 6.25rem;
-    gap: 1.25rem;
-}
-
-.home-principal h1 {
-    font-size: 50px;
-    margin-bottom: 50px;
+.video-section h1 {
+    color: #dfdfdf;
+    font-size: 60px;
+    margin: 130px 0 40px 0;
     text-align: center;
+    font-weight: bold;
 }
 
-.home-principal p {
+.video-section p {
     font-size: 30px;
     text-align: center;
+    margin: 0;
 }
 
-.home-principal a {
+.video-section .link-game {
     text-decoration: none;
-    background: #18b8e0;
-    border-radius: 10px;
+    background: #0e85a3;
+    border-radius: 15px;
     padding: 10px 30px;
     font-weight: bold;
-    margin-top: 3.125rem;
+    margin-top: 2.125rem;
     font-size: 20px;
-    color: #fff;
+    color: #dbdbdb;
 }
 
-.home-principal a:hover {
+.video-section a.link-game {
     opacity: .8;
 }
 
-video {
-    position: fixed;
-    top: 0;
-    left: 0;
+.game-section {
+    overflow: hidden;
     width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    /* Coloca el video detrás de otros elementos */
+    height: auto;
+    padding: 1.475rem 6.25rem;
+    margin-bottom: 50px;
 }
 
-.section-play {
-    background-image: url('../img/start.jpg');
-    padding: 0 100px 50px 100px;
-    
+.game-section .bubbles {
+    position: relative;
+    display: flex;
+    z-index: -1;
 }
-.container {
+
+.game-section .bubbles span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #4fc2dc70;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc2dc25,
+        0 0 50px #4fc2dc59,
+        0 0 100px #4fc2dc91;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/ var(--i));
+}
+
+.game-section .bubbles span:nth-child(even) {
+    background: #ff2d7673;
+    box-shadow: 0 0 0 10px #ff2d7623,
+        0 0 50px #ff2d7652,
+        0 0 100px #ff2d764d;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.section-game {
+    padding: 30px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+}
+.section-game .ArrowFloat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #18b8e0;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    border-radius: 50%;
+    animation: floatin 1s infinite ease-in-out;
+}
+
+.section-game .ArrowFloat i {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+@keyframes floatin {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Comienza y termina en la posición inicial */
+    }
+
+    50% {
+        transform: translateY(10px);
+        /* Sube 10 píxeles en el punto medio de la animación */
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#my_canvas {
+    background: #181e3d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .barra {
-    background: #3fff05;
-    color: #fff;
+    width: 300px;
+    height: 100px;
+    background: #18b8e0;
+    color: var(--primary-color);
     font-size: 20px;
+    border-radius: 15px;
     padding: 20px;
-    float: right;
-    position: fixed;
-    z-index: 1;
-}
-#my_canvas {
-    background: #6d6d6d8f;
-    border-radius: 10px;
 }
 .boton {
-    background: #b905dd;
+    background: #18b8e0;
     padding: 10px 20px;
     border-radius: 16px;
     border: none;
     transition: .3s ease;
 }
-.boton:hover  {
+
+.boton:hover {
     opacity: .8;
-    box-shadow: 2px 5px 10px #05dd5f;
+    box-shadow: 0 0 3px 5px #d605dd5d;
 }
+
+.content-section {
+    /* Estilos para la segunda sección, ajusta según tus necesidades */
+}
+
+.astronaut-container {
+    width: 100px; /* Ajusta el tamaño del contenedor según tus necesidades */
+    height: 100px;
+    position: relative; /* Permite posicionar la imagen dentro del contenedor */
+  }
+  
+  .astronaut {
+    width: 100%; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+    height: 100%;
+    animation: moveRightHand 2s ease-in-out infinite alternate,
+               moveLeftHand 2s ease-in-out infinite alternate,
+               moveRightFoot 2s ease-in-out infinite alternate,
+               moveLeftFoot 2s ease-in-out infinite alternate;
+  }
+  @keyframes moveRightHand {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moveLeftHand {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moveRightFoot {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moveLeftFoot {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+    
