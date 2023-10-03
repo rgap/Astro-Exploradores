@@ -40,6 +40,9 @@ body {
 
 .video-section header {
     margin-top: 10px;
+    margin-bottom: 130px;
+    top: 0;
+    
 }
 
 .video-section header nav {
@@ -78,30 +81,31 @@ body {
 
 .video-section h1 {
     color: #dfdfdf;
-    font-size: 60px;
-    margin: 130px 0 40px 0;
+    font-size: 75px;
+    /* margin: 130px 0 40px 0; */
     text-align: center;
     font-weight: bold;
 }
 
 .video-section p {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
     margin: 0;
 }
 
 .video-section .link-game {
     text-decoration: none;
-    background: #0e85a3;
+    background: #14bde7;
     border-radius: 15px;
     padding: 10px 30px;
     font-weight: bold;
     margin-top: 2.125rem;
     font-size: 20px;
     color: #dbdbdb;
+    transition: .3s ease-in-out;
 }
 
-.video-section a.link-game {
+.video-section .link-game:hover {
     opacity: .8;
 }
 
@@ -221,72 +225,25 @@ body {
 
 .boton:hover {
     opacity: .8;
-    box-shadow: 0 0 3px 5px #d605dd5d;
+    box-shadow: 0 0 3px 5px #f713ff5d;
 }
 
-.content-section {
-    /* Estilos para la segunda sección, ajusta según tus necesidades */
+  @media screen and (min-width: 1300px) {
+    .video-section h1 {
+        font-size: 60px;
+    }
+    .video-section p {
+        font-size: 30px;
+    }
 }
-
-.astronaut-container {
-    width: 100px; /* Ajusta el tamaño del contenedor según tus necesidades */
-    height: 100px;
-    position: relative; /* Permite posicionar la imagen dentro del contenedor */
-  }
-  
-  .astronaut {
-    width: 100%; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
-    height: 100%;
-    animation: moveRightHand 2s ease-in-out infinite alternate,
-               moveLeftHand 2s ease-in-out infinite alternate,
-               moveRightFoot 2s ease-in-out infinite alternate,
-               moveLeftFoot 2s ease-in-out infinite alternate;
-  }
-  @keyframes moveRightHand {
-    0% {
-      transform: rotate(0deg);
+@media screen and (max-width: 500px) {
+    .video-section {
+        height: auto;
     }
-    50% {
-      transform: rotate(20deg);
+    .video-section h1 {
+        font-size: 40px;
     }
-    100% {
-      transform: rotate(0deg);
+    .video-section p {
+        font-size: 20px;
     }
-  }
-  
-  @keyframes moveLeftHand {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(-20deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  @keyframes moveRightFoot {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(-10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  @keyframes moveLeftFoot {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-    
+}
