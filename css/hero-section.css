@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link-game {
+  z-index: 10;
+}
+
+.video-section {
+  padding: 0;
+}
+
+.video-section header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #181e3d;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-section header {
+  z-index: 10;
+}
+
+.hero-section .text-game {
+  width: 60%;
+  z-index: 10;
+}
+
+.hero-section .title-game {
+  z-index: 10;
+}
+
+.hero-section i {
+  position: absolute;
+  top: -10px; /* Adjusted from -250px */
+  background: rgba(255, 255, 255, 0.5);
+  animation: animateStars linear 5s infinite; /* Added a 5 second duration */
+  border-radius: 50%; /* Making stars circular */
+}
+@keyframes animateStars {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.hero-section .hero-rocket {
+  position: relative;
+  animation: animate 0.2s ease infinite;
+  z-index: 10;
+  margin-top: 30px;
+}
+
+.hero-section img {
+  width: 200px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* .hero-section .hero-rocket::before {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background: linear-gradient(#00d0ff, transparent);
+}
+
+.hero-section .hero-rocket::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background: linear-gradient(#00d0ff, transparent);
+  filter: blur(20px);
+} */

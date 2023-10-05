@@ -1,209 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astro Exploradores</title>
-    <link rel="shortcut icon" href="img/favicon.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="shortcut icon" href="img/favicon.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/hero-section.css" />
+  </head>
 
-<body>
+  <body>
     <section class="video-section">
-        <video autoplay loop muted>
+      <!-- <video autoplay loop muted>
             <source src="img/home.mp4" type="video/mp4">
-        </video>
-        <header class="">
-            <nav class="navigation">
-                <a href="#" class="logo"><img src="img/favicon.jpeg" alt="" width="auto"></a>
-                <ul>
-                    <li><a href="demo.html" class="home-links">Home</a></li>
-                    <li><a href="#" class="home-links">About</a></li>
-                    <li><a href="#" class="home-links">Group</a></li>
-                </ul>
-            </nav>
+        </video> -->
+
+      <div class="hero-section">
+        <header>
+          <nav class="navigation">
+            <a href="#" class="logo"
+              ><img src="img/favicon.jpeg" alt="" width="auto"
+            /></a>
+            <ul>
+              <li><a href="demo.html" class="home-links">Home</a></li>
+              <li><a href="#" class="home-links">About</a></li>
+              <li><a href="#" class="home-links">Group</a></li>
+            </ul>
+          </nav>
         </header>
-        <h1>👋 Hey, Bienvenido a la web de <span style="color: #18b8e0;">Astro Exploradores</span> </h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, cumque dolorum. Pariatur, ducimus dolorum
-            voluptatum ut, debitis autem molestias odit accusantium</p>
+
+        <div class=".title-game">
+          <h1>
+            <span style="color: #18b8e0">Astro Exploradores</span>
+          </h1>
+        </div>
+        <p class="text-game">
+          Explora lo desconocido mientras un agente de viajes te elabora el
+          itinerario perfecto
+        </p>
         <a href="#jugar" class="link-game">Jugar Ahora</a>
+
+        <div class="hero-rocket">
+          <img src="./img/astro.png" />
+        </div>
+      </div>
     </section>
     <section class="game-section d-flex flex-column align-items-center gap-2">
-        <div class="bubbles">
-            <span style="--i:11;"></span>
-            <span style="--i:12;"></span>
-            <span style="--i:24;"></span>
-            <span style="--i:10;"></span>
-            <span style="--i:14;"></span>
-            <span style="--i:23;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:16;"></span>
-            <span style="--i:19;"></span>
-            <span style="--i:20;"></span>
-            <span style="--i:22;"></span>
-            <span style="--i:25;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:21;"></span>
-            <span style="--i:15;"></span>
-            <span style="--i:13;"></span>
-            <span style="--i:26;"></span>
-            <span style="--i:17;"></span>
-            <span style="--i:13;"></span>
-            <span style="--i:28;"></span>
+      <div class="bubbles">
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 28"></span>
 
-            <span style="--i:10;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:5;"></span>
-            <span style="--i:10;"></span>
-            <span style="--i:8;"></span>
-            <span style="--i:12;"></span>
-            <span style="--i:9;"></span>
-            <span style="--i:15;"></span>
-            <span style="--i:19;"></span>
-            <span style="--i:28;"></span>
-            <span style="--i:20;"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 8"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 28"></span>
+        <span style="--i: 20"></span>
 
-            <span style="--i:11;"></span>
-            <span style="--i:12;"></span>
-            <span style="--i:24;"></span>
-            <span style="--i:10;"></span>
-            <span style="--i:14;"></span>
-            <span style="--i:23;"></span>
-            <span style="--i:18;"></span>
-            <span style="--i:16;"></span>
-            <span style="--i:19;"></span>
-            <span style="--i:20;"></span>
-            <span style="--i:22;"></span>
-            <span style="--i:12;"></span>
-            <span style="--i:9;"></span>
-            <span style="--i:15;"></span>
-            <span style="--i:19;"></span>
-            <span style="--i:28;"></span>
-            <span style="--i:20;"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 28"></span>
+        <span style="--i: 20"></span>
+      </div>
+      <h2 class="fw-bold">Aprender sobre el Espacio</h2>
+      <p class="text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, est
+        perspiciatis ea blanditiis delectus aperiam, natus odio aut accusantium
+        nesciunt reprehenderit odit fugit corrupti magni! Repellat nam nesciunt
+        sint pariatur!
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
-        <h2 class="fw-bold">Aprender sobre el Espacio</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, est perspiciatis ea
-            blanditiis delectus aperiam, natus odio aut accusantium nesciunt reprehenderit odit fugit corrupti magni!
-            Repellat nam nesciunt sint pariatur!</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="section-game " id="jugar">
-        <div class="ArrowFloat">
-            <a href="#juego" id="#about"><i class="bi bi-arrow-down"></i></a>
+    <section class="section-game" id="jugar">
+      <div class="ArrowFloat">
+        <a href="#juego" id="#about"><i class="bi bi-arrow-down"></i></a>
+      </div>
+      <h2 class="text-center fw-bold">Jugar Juego</h2>
+      <p class="text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+        impedit non fugit voluptates qui temporibus id unde. Amet vitae dolorum
+        id numquam rerum ab optio, nam illo, vero hic voluptates.
+      </p>
+      <div class="d-flex flex-wrap gap-5">
+        <div class="card" style="width: 18rem">
+          <img src="img/GameStart.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Juego Tic Tac</h5>
+            <p class="card-text">
+              El juego consiste en disparar a las estrellas que bienen bajan
+              desde la parte superior de la pantalla
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Jugar Ahora
+            </button>
+          </div>
         </div>
-        <h2 class="text-center fw-bold">Jugar Juego</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit non fugit
-            voluptates qui
-            temporibus id unde. Amet vitae dolorum id numquam rerum ab optio, nam illo, vero hic voluptates.</p>
-        <div class="d-flex flex-wrap gap-5">
-            <div class="card" style="width: 18rem;">
-                <img src="img/GameStart.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Juego Tic Tac</h5>
-                    <p class="card-text">El juego consiste en disparar a las estrellas que bienen bajan desde la parte
-                        superior de la pantalla</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Jugar Ahora
-                    </button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="img/GameStart.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Juego Disparos</h5>
-                    <p class="card-text">El juego consiste en disparar a las estrellas que bienen bajan desde la parte
-                        superior de la pantalla</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Jugar Ahora
-                    </button>
-                </div>
-            </div>
+        <div class="card" style="width: 18rem">
+          <img src="img/GameStart.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Juego Disparos</h5>
+            <p class="card-text">
+              El juego consiste en disparar a las estrellas que bienen bajan
+              desde la parte superior de la pantalla
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Jugar Ahora
+            </button>
+          </div>
         </div>
-
+      </div>
     </section>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl rounded modal-dialog-centered">
-            <div class="modal-content " style="background: #181e3d;">
-                <div class="modal-body d-flex justify-content-center align-items-center">
-                    <div class="container d-flex gap-2">
-                        <div class="d-flex flex-column gap-2">
-                            <canvas id="my_canvas" width="700" height="500"></canvas>
-                            <div class="text-center gap-5">
-                                <button class="boton fw-bold" id="left_btn">Izquierda</button>
-                                <button class="boton fw-bold" id="fire_btn">Disparar</button>
-                                <button class="boton fw-bold" id="right_btn">Derecha</button>
-                            </div>
-                        </div>
-                        <h3 class="barra"></h3>
-                    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl rounded modal-dialog-centered">
+        <div class="modal-content" style="background: #181e3d">
+          <div
+            class="modal-body d-flex justify-content-center align-items-center"
+          >
+            <div class="container d-flex gap-2">
+              <div class="d-flex flex-column gap-2">
+                <canvas id="my_canvas" width="700" height="500"></canvas>
+                <div class="text-center gap-5">
+                  <button class="boton fw-bold" id="left_btn">Izquierda</button>
+                  <button class="boton fw-bold" id="fire_btn">Disparar</button>
+                  <button class="boton fw-bold" id="right_btn">Derecha</button>
                 </div>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar Juego</button>
+              </div>
+              <h3 class="barra"></h3>
             </div>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+            Cerrar Juego
+          </button>
         </div>
+      </div>
     </div>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="./js/hero-section.js"></script>
+  </body>
 </html>
