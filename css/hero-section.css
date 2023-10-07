@@ -1,20 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .link-game {
   z-index: 10;
-}
-
-.video-section {
-  padding: 0;
-}
-
-.video-section header {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .hero-section {
@@ -24,7 +9,7 @@
   background-color: #181e3d;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -44,10 +29,20 @@
 
 .hero-section i {
   position: absolute;
-  top: -10px; /* Adjusted from -250px */
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(36, 208, 235, 0.5);
   animation: animateStars linear 5s infinite; /* Added a 5 second duration */
-  border-radius: 50%; /* Making stars circular */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
 @keyframes animateStars {
   0% {
@@ -60,7 +55,7 @@
 
 .hero-section .hero-rocket {
   position: relative;
-  animation: animate 0.2s ease infinite;
+  animation: animate-hero-section 0.2s ease infinite;
   z-index: 10;
   margin-top: 30px;
 }
@@ -69,7 +64,7 @@
   width: 200px;
 }
 
-@keyframes animate {
+@keyframes animate-hero-section {
   0% {
     transform: translateY(-2px);
   }
@@ -78,26 +73,3 @@
     transform: translateY(2px);
   }
 }
-
-/* .hero-section .hero-rocket::before {
-  content: "";
-  position: absolute;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 200px;
-  background: linear-gradient(#00d0ff, transparent);
-}
-
-.hero-section .hero-rocket::after {
-  content: "";
-  position: absolute;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 200px;
-  background: linear-gradient(#00d0ff, transparent);
-  filter: blur(20px);
-} */

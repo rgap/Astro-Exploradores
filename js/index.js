@@ -1,9 +1,21 @@
 function initCanvas() {
     var ctx = document.getElementById('my_canvas').getContext('2d');
+
+    var animateInterval; // Declara la variable animateInterval fuera de la función
+    var stopButton = document.getElementById('stop-button');
+
+    stopButton.addEventListener('click', function () {
+        clearInterval(animateInterval);
+        // Puedes agregar aquí cualquier lógica adicional para detener el juego
+    });
+
     var backgroundImage = new Image();
     var naveImage = new Image();
     var objectImage1 = new Image();
     var objectImage2 = new Image();
+
+
+
 
     backgroundImage.src = "";
     naveImage.src = "img/astro.png";
@@ -132,7 +144,7 @@ function initCanvas() {
                 if (m.x <= e.x + e.w && m.x + m.w >= e.x &&
                     m.y >= e.y && m.y <= e.y + e.h) {
                     enemigos.splice(i, 1);
-                    document.querySelector('.barra').innerHTML = e.id + " Destruido"  ;
+                    document.querySelector('.barra').innerHTML = e.id + " Destruido";
                 }
             }
         }
@@ -164,7 +176,7 @@ function initCanvas() {
         renderEnemigos(enemigos);
     }
 
-    var animateInterval = setInterval(animate, 6);
+    var animateInterval = setInterval(animate, 16);
 
     var left_btn = document.getElementById('left_btn');
     var right_btn = document.getElementById('right_btn');
@@ -279,7 +291,23 @@ function initCanvas() {
             });
         }
     });
+    var startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', function() {
+        animateInterval = setInterval(animate, 6); // Iniciar el juego
+    });
+
+    // Agrega un evento clic para el botón "Detener Juego"
+    var stopButton = document.getElementById('stop-button');
+    stopButton.addEventListener('click', function () {
+        clearInterval(animateInterval); // Detener el juego
+    });
 }
 window.addEventListener('load', function (event) {
+    
+});
+var startButton = document.getElementById('start-button');
+startButton.addEventListener('click', function () {
+    // Llama a initCanvas() solo cuando se hace clic en el botón "Iniciar Juego"
     initCanvas();
-})
+    animateInterval = setInterval(animate, 6); // Iniciar el juego
+});
