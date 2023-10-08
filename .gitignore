@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Archivos generados durante el desarrollo
+*.log
+npm-debug.log*
+
+# Dependencias generadas por npm
+package-lock.json
+package.json
+
+# Directorio donde se instalan las dependencias (puedes comentar esto si prefieres mantenerlo en el repositorio)
+# /node_modules/
+
+# Archivo de configuración de entorno local
+.env
+
+# Archivos y directorios específicos de tu IDE o editor (puedes personalizar esto según tu editor)
+.vscode/
+.idea/
+
+# Archivos de configuración específicos de sistemas operativos
+.DS_Store
+Thumbs.db

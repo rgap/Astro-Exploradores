@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astro Exploradores</title>
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="public/img/logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -14,48 +14,87 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/section-destino.css" />
-    <link rel="stylesheet" href="css/hero-section.css" />
+    <link rel="stylesheet" href="public/css/styles.css" />
+    <link rel="stylesheet" href="public/css/section-destino.css" />
+    <link rel="stylesheet" href="public/css/hero-section.css" />
   </head>
 
   <body>
-    <section class="video-section">
+    <section class="video-section desktop" style="height: 800px">
+      <video autoplay loop muted>
+        <source src="public/img/video/home.mp4" type="video/mp4" />
+      </video>
+      <header class="">
+        <div class="reserve">
+          <span>Don't miss the next flight offers -></span>
+          <a href="#" class="link-reserva">Make a Reservation</a>
+        </div>
+        <nav class="navigation">
+          <a href="#" class="logo"
+            ><img src="public/img/logo.png" alt="" width="auto"
+          /></a>
+          <ul>
+            <li><a href="index.html" class="home-links">Home</a></li>
+            <li>
+              <a href="./pages/about.html" class="home-links">About us</a>
+            </li>
+            <li>
+              <a href="./pages/space.html" class="home-links">Exploration</a>
+            </li>
+            <li><a href="./pages/blog.html" class="home-links">Blog</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h1>👋 Hello, Space Explorer</h1>
+      .
+      <p>
+        Welcome to our website
+        <span style="color: #18b8e0; font-weight: bold"
+          >Astro Exploradores</span
+        >
+        is a place where you can book a trip to space. Would you like to be part
+        of this adventure?
+      </p>
+      <a href="#jugar" class="link-game">Explore Now</a>
+    </section>
+    <section class="video-section mobile" style="height: 600px">
       <div class="hero-section">
         <header class="">
           <div class="reserve">
-            <span>No te pierdas las próximas ofertas en vuelos -></span>
-            <a href="#" class="link-reserva">Haz tu Reserva</a>
+            <span class="text-center"
+              >Don't miss out on the next offers -></span
+            >
+            <a href="#" class="link-reserva">Make a Reservation</a>
           </div>
           <nav class="navigation">
             <a href="#" class="logo"
-              ><img src="img/logo.png" alt="" width="auto"
+              ><img src="public/img/logo.png" alt="" width="auto"
             /></a>
             <ul>
-              <li><a href="demo.html" class="home-links">Inicio</a></li>
-              <li><a href="#" class="home-links">Planetas</a></li>
-              <li><a href="#" class="home-links">Espacio</a></li>
+              <li><a href="index.html" class="home-links">Home</a></li>
+              <li>
+                <a href="./pages/about.html" class="home-links">About us</a>
+              </li>
+              <li><a href="#" class="home-links">Exploration</a></li>
               <li><a href="#" class="home-links">Blog</a></li>
             </ul>
           </nav>
         </header>
-        <h1>👋 Hey</h1>
+        <h1 class="text-center">👋 Hello, Space Explorer</h1>
         <p>
-          Bienvenido al espacio, un lugar preparardo por el equipo
+          Welcome to our website
           <span style="color: #18b8e0; font-weight: bold"
             >Astro Exploradores</span
           >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          is a place where you can book a trip to space. Would you like to be
+          part of this adventure?
         </p>
-        <a href="#jugar" class="link-game">Explorar Ahora</a>
-        <div class="hero-rocket">
-          <img src="./img/astro.png" />
-        </div>
+        <a href="#jugar" class="link-game">Explore Now</a>
       </div>
     </section>
-    <section class="destination-section">
-      <h2>Principales Destinos</h2>
-      <div class="d-flex">
+    <section class="destination-section" id="destination">
+      <h2>Main Destinations</h2>
+      <div class="destination-mobile d-flex">
         <div class="card card-destination" style="width: 18rem">
           <img
             src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/09/Marte-planeta-rojo.jpg?fit=2057%2C1158&quality=50&strip=all&ssl=1"
@@ -64,15 +103,15 @@
             width="100%"
           />
           <div class="card-body">
-            <h5 class="card-title">Marte</h5>
-            <a href="#" class="btn btn-primary">Resevar</a>
+            <h5 class="card-title">Mars</h5>
+            <a href="#" class="btn btn-primary">Reservation</a>
           </div>
           <div class="info-box">
-            <p>Lugares turísticos de Marte:</p>
+            <p>Tourist sites on Mars:</p>
             <ul>
-              <li>Lugar 1</li>
-              <li>Lugar 2</li>
-              <li>Lugar 3</li>
+              <li>Olympus Mons</li>
+              <li>Valles Marineris</li>
+              <li>Phobos and Deimos</li>
             </ul>
           </div>
         </div>
@@ -83,15 +122,15 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Saturno</h5>
-            <a href="#" class="btn btn-primary">Reservar</a>
+            <h5 class="card-title">Saturn</h5>
+            <a href="#" class="btn btn-primary">Reservation</a>
           </div>
           <div class="info-box">
-            <p>Lugares turísticos de Saturno:</p>
+            <p>Tourist sites on Saturn:</p>
             <ul>
-              <li>Lugar 1</li>
-              <li>Lugar 2</li>
-              <li>Lugar 3</li>
+              <li>The Rings of Saturn</li>
+              <li>Enceladus</li>
+              <li>The Great Northern Storm</li>
             </ul>
           </div>
         </div>
@@ -102,15 +141,15 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Luna</h5>
-            <a href="#" class="btn btn-primary">Reservar</a>
+            <h5 class="card-title">Moon</h5>
+            <a href="#" class="btn btn-primary">Reservation</a>
           </div>
           <div class="info-box">
-            <p>Lugares turísticos de Luna:</p>
+            <p>Tourist sites on the Moon:</p>
             <ul>
-              <li>Lugar 1</li>
-              <li>Lugar 2</li>
-              <li>Lugar 3</li>
+              <li>Apollo Landing Sites</li>
+              <li>Tycho Crater</li>
+              <li>Lunar Maria</li>
             </ul>
           </div>
         </div>
@@ -122,21 +161,21 @@
           />
           <div class="card-body">
             <h5 class="card-title">Venus</h5>
-            <a href="#" class="btn btn-primary">Reservar</a>
+            <a href="#" class="btn btn-primary">Reservation</a>
           </div>
           <div class="info-box">
             <p>Lugares turísticos de Venus:</p>
             <ul>
-              <li>Lugar 1</li>
-              <li>Lugar 2</li>
-              <li>Lugar 3</li>
+              <li>Maxwell Montes</li>
+              <li>Maat Mons</li>
+              <li>Aphrodite Terra and Ishtar Terra</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
     <section
-      class="d-flex align-items-center justify-content-center gap-5"
+      class="nextOf-mobile d-flex align-items-center justify-content-center gap-5"
       style="padding: 10px 100px"
     >
       <img
@@ -144,12 +183,11 @@
         alt=""
       />
       <div>
-        <h2 class="fw-bold">No te pierdas las próximas ofertas en vuelos.</h2>
+        <h2 class="fw-bold">Don't miss out on upcoming flight offers.</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-          quisquam numquam, natus laudantium sit soluta placeat nam fugiat
-          repellat dolorum accusamus assumenda maxime! Consectetur fugiat
-          molestias quaerat sit optio totam?
+          Embark on your next adventure without stretching your budget. From
+          sun-soaked beaches to bustling cityscapes, our limited-time flight
+          deals are tailored just for you.
         </p>
         <a
           href=""
@@ -162,7 +200,7 @@
             color: #fff;
             font-weight: bold;
           "
-          >Reservar Ahora</a
+          >Make a Reservation</a
         >
       </div>
     </section>
@@ -219,12 +257,13 @@
         <span style="--i: 28"></span>
         <span style="--i: 20"></span>
       </div>
-      <h2 class="fw-bold">Aprender sobre el Espacio</h2>
+      <h2 class="fw-bold">Learn about the space</h2>
       <p class="text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, est
-        perspiciatis ea blanditiis delectus aperiam, natus odio aut accusantium
-        nesciunt reprehenderit odit fugit corrupti magni! Repellat nam nesciunt
-        sint pariatur!
+        Venture beyond our blue planet and dive deep into the mysteries of the
+        cosmos. From the fiery birth of stars to the enigmatic black holes,
+        space is a vast expanse filled with wonders waiting to be discovered.
+        Join us as we journey through galaxies, explore celestial phenomena, and
+        unravel the secrets of the universe.
       </p>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
         <div class="card" style="width: 18rem">
@@ -234,12 +273,12 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Planetas</h5>
+            <h5 class="card-title">Planets</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Beyond our Earthly confines lie celestial bodies of wonder, each
+              with its own unique story and characteristics.
             </p>
-            <a href="#" class="btn btn-primary">Aprender más</a>
+            <a href="#" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -249,12 +288,13 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Universo</h5>
+            <h5 class="card-title">Universe</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Spanning vast distances beyond human comprehension, the universe
+              is an ever-expanding tapestry of galaxies, stars, planets, and
+              phenomena yet to be discovered.
             </p>
-            <a href="#" class="btn btn-primary">Aprender más</a>
+            <a href="#" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -264,12 +304,13 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Meteorito</h5>
+            <h5 class="card-title">Meteorites</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Originating from the remnants of our early solar system,
+              meteorites are cosmic travelers that bridge the gap between the
+              distant cosmos and our home planet.
             </p>
-            <a href="#" class="btn btn-primary">Aprender más</a>
+            <a href="#" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -279,12 +320,13 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Prepararse</h5>
+            <h5 class="card-title">How to prepare?</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Whether you're gearing up for a new adventure, tackling a
+              challenge, or embarking on a personal endeavor, preparation is the
+              key to success.
             </p>
-            <a href="#" class="btn btn-primary">Aprende más</a>
+            <a href="#" class="btn btn-primary">Learn mode</a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -294,12 +336,12 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Viaje Espacial</h5>
+            <h5 class="card-title">Space travel</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Once a distant dream penned in the pages of science fiction, space
+              travel is rapidly transitioning from fantasy to reality.
             </p>
-            <a href="#" class="btn btn-primary">Aprender más</a>
+            <a href="./pages/blog.html" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -309,60 +351,42 @@
             alt="..."
           />
           <div class="card-body">
-            <h5 class="card-title">Estrellas</h5>
+            <h5 class="card-title">Stars</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Beacons of light scattered across the vast tapestry of the night
+              sky, stars are the cosmic furnaces that power the universe.
             </p>
-            <a href="#" class="btn btn-primary">Aprende más</a>
+            <a href="#" class="btn btn-primary">Learn more</a>
           </div>
         </div>
       </div>
     </section>
     <section class="section-game" id="jugar">
       <div class="ArrowFloat">
-        <a href="#juego" id="#about"><i class="bi bi-arrow-down"></i></a>
+        <a href="#jugar" id="#about"><i class="bi bi-arrow-down"></i></a>
       </div>
-      <h2 class="text-center fw-bold">Jugar Juego</h2>
+      <h2 class="text-center fw-bold">Space Exploration Game</h2>
       <p class="text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-        impedit non fugit voluptates qui temporibus id unde. Amet vitae dolorum
-        id numquam rerum ab optio, nam illo, vero hic voluptates.
+        Journey through the infinite expanse of the cosmos, where the unknown
+        awaits at every turn.
       </p>
       <div class="d-flex flex-wrap gap-5">
         <div class="card" style="width: 18rem">
-          <img src="img/GameStart.jpeg" class="card-img-top" alt="..." />
+          <img src="public/img/bgGame.jpeg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Juego Tic Tac</h5>
+            <!-- <h5 class="card-title">Spa</h5> -->
             <p class="card-text">
-              El juego consiste en disparar a las estrellas que bienen bajan
-              desde la parte superior de la pantalla
+              Reserve trips to exotic space destinations, strategize itineraries
+              for interstellar tourists, and unlock rare cosmic locales 🚀🪐✨
             </p>
+
             <button
               type="button"
               class="btn btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              Jugar Ahora
-            </button>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img src="img/GameStart.jpeg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Juego Disparos</h5>
-            <p class="card-text">
-              El juego consiste en disparar a las estrellas que bienen bajan
-              desde la parte superior de la pantalla
-            </p>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Jugar Ahora
+              Start Exploring!
             </button>
           </div>
         </div>
@@ -378,56 +402,64 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-xl rounded modal-dialog-centered">
-        <div class="modal-content" style="background: #181e3d">
+        <div
+          class="modal-content"
+          style="
+            background-image: url('./public/img/bgGame.jpeg');
+            background-size: cover;
+          "
+        >
           <div
             class="modal-body d-flex justify-content-center align-items-center"
           >
             <div class="container d-flex gap-2">
               <div class="d-flex flex-column gap-2">
-                <canvas id="my_canvas" width="700" height="500"></canvas>
-                <div class="text-center gap-5">
-                  <button class="boton fw-bold" id="left_btn">Izquierda</button>
-                  <button class="boton fw-bold" id="fire_btn">Disparar</button>
-                  <button class="boton fw-bold" id="right_btn">Derecha</button>
-                  <button id="start-button">Iniciar Juego</button>
-                  <button id="stop-button">Detener Juego</button>
+                <canvas
+                  id="my_canvas"
+                  width="900"
+                  height="500"
+                  style="background: transparent"
+                ></canvas>
+                <div class="text-center gap-5" id="modal-content">
+                  <!-- Este es el contenido que se actualizará dinámicamente -->
                 </div>
               </div>
-              <h3 class="barra"></h3>
             </div>
           </div>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-            Cerrar Juego
+            Exit the Game
           </button>
         </div>
       </div>
     </div>
     <footer>
       <div class="footer-container d-flex">
-        <div class="d-flex flex-column">
-          <img src="img/logo.png" alt="" />
-          <div class="d-flex align-items-center gap-2 justify-content-center">
+        <div class="box-foot d-flex flex-column gap-4">
+          <img src="public/img/logo.png" alt="" />
+          <div
+            class="socials d-flex align-items-center gap-2 justify-content-center"
+          >
             <a
               href="#"
-              class="text-decoration-none color-white"
+              class="link-socials text-decoration-none color-white"
               style="color: #fff"
               ><i class="bi bi-facebook"></i
             ></a>
             <a
-              href=""
-              class="text-decoration-none color-white"
+              href="#"
+              class="link-socials text-decoration-none color-white"
               style="color: #fff"
               ><i class="bi bi-youtube"></i
             ></a>
             <a
-              href=""
-              class="text-decoration-none color-white"
+              href="#"
+              class="link-socials text-decoration-none color-white"
               style="color: #fff"
               ><i class="bi bi-instagram"></i
             ></a>
             <a
               href=""
-              class="text-decoration-none color-white"
+              class="link-socials text-decoration-none color-white"
               style="color: #fff"
               ><i class="bi bi-github"></i
             ></a>
@@ -435,38 +467,39 @@
         </div>
         <div class="w-100 footer-nav d-flex justify-content-between">
           <div class="footer-group">
-            <h5>Nosotros</h5>
-            <ul class="m-0 p-0 list-style-none">
-              <li><a href="">Quienes Somos?</a></li>
-              <li><a href="">Equipo</a></li>
-              <li><a href="">Proyecto</a></li>
+            <h5>About us</h5>
+            <ul class="m-0 p-0">
+              <li><a href="">About us</a></li>
+              <li><a href="">Team</a></li>
+              <li><a href="">Project</a></li>
             </ul>
           </div>
           <div class="footer-group">
             <h5>Material</h5>
-            <ul class="m-0 p-0 list-style-none">
+            <ul class="m-0 p-0">
               <li><a href="">Blogs</a></li>
-              <li><a href="">Datos</a></li>
-              <li><a href="">Noticias</a></li>
+              <li><a href="">Data</a></li>
+              <li><a href="">News</a></li>
             </ul>
           </div>
           <div class="footer-group">
-            <h5>Saber más</h5>
-            <ul class="m-0 p-0 list-style-none">
-              <li><a href="">Planetas</a></li>
-              <li><a href="">Espacio</a></li>
+            <h5>More info</h5>
+            <ul class="m-0 p-0">
+              <li><a href="">Planets</a></li>
+              <li><a href="">Space Exploration</a></li>
               <li><a href="">Videos</a></li>
-              <li><a href="">Reserva</a></li>
+              <li><a href="">Reservations</a></li>
             </ul>
           </div>
         </div>
       </div>
       <p class="text-center mt-4">
-        «Copyright» © 2023 Astro Exploradores todos los derechos reservados
+        «Copyright» © 2023 Astro Exploradores. All rights reserved.
       </p>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="public/js/game.js"></script>
+    <script src="public/js/hero-section.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/hero-section.js"></script>
   </body>
 </html>
