@@ -130,9 +130,12 @@ body {
 .video-section .link-game:hover {
   opacity: 0.8;
 }
+
 .video-section.mobile {
-  display: none; /* Ocultar la sección de video en móvil */
+  display: none;
+  /* Ocultar la sección de video en móvil */
 }
+
 .destino-section {
   width: 100%;
   background: #0b7e9b;
@@ -260,35 +263,43 @@ body {
   opacity: 0.8;
   box-shadow: 0 0 3px 5px #f713ff5d;
 }
+
 footer {
   width: 100%;
   background: #001e55;
   padding: 10px 100px;
 }
+
 footer .footer-container {
   gap: 150px;
   margin-bottom: 20px;
 }
+
 footer .footer-container .box-foot .socials .link-socials i:hover {
   color: #18b8e0;
 }
+
 footer .footer-container .footer-nav .footer-group h5 {
   color: #00c8fa;
   font-weight: bold;
 }
+
 footer .footer-container .footer-nav .footer-group ul {
   list-style: none;
   color: #fff;
 }
+
 footer .footer-container .footer-nav .footer-group ul li a {
   text-decoration: none;
   color: #fff;
 }
+
 footer .footer-container .footer-nav .footer-group ul li a:hover {
   text-decoration: none;
   color: #18b8e0;
   text-decoration: underline;
 }
+
 @media screen and (max-width: 1200px) {
   .video-section h1 {
     font-size: 60px;
@@ -304,12 +315,16 @@ footer .footer-container .footer-nav .footer-group ul li a:hover {
     width: 100%;
     font-size: 15px;
   }
+
   /* Cambia el punto de quiebre (768px) según tus necesidades */
   .video-section.desktop {
-    display: none; /* Ocultar la sección de video en móvil */
+    display: none;
+    /* Ocultar la sección de video en móvil */
   }
+
   .video-section.mobile {
-    display: block; /* Mostrar la sección de móvil en pantallas pequeñas */
+    display: block;
+    /* Mostrar la sección de móvil en pantallas pequeñas */
     padding: 0 50px;
   }
 
@@ -317,28 +332,54 @@ footer .footer-container .footer-nav .footer-group ul li a:hover {
     width: 100%;
     margin-bottom: 50px;
   }
+
   .video-section .hero-section header .reserve {
     flex-direction: column;
     gap: 0;
   }
+
   .video-section .hero-section header .navigation ul {
-    display: none;
+    flex-direction: column;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Oculta la barra de menú lateral inicialmente */
+    width: 80%;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
   }
+  .video-section .hero-section header .navigation ul li a {
+    color: var(--secondary-color);
+    font-size: 23px;
+  }
+  .video-section .hero-section header .navigation .menu-icon {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 25px;
+  }
+
   .video-section .hero-section h1 {
     font-size: 30px;
   }
+
   .video-section .hero-section p {
     font-size: 20px;
   }
+
   .video-section .hero-section .link-game {
     font-size: 15px;
   }
+
   .destination-section {
     background: #00c8fa;
   }
+
   .destination-section .destination-mobile {
     flex-direction: column;
   }
+
   .game-section {
     overflow: hidden;
     width: 100%;
@@ -346,16 +387,20 @@ footer .footer-container .footer-nav .footer-group ul li a:hover {
     padding: 1.475rem 3.25rem;
     margin-bottom: 50px;
   }
+
   .nextOf-mobile {
     flex-direction: column;
   }
+
   footer {
     padding: 0 50px;
   }
+
   footer .footer-container {
     flex-direction: column;
     gap: 3.125rem;
   }
+
   footer .footer-container .footer-nav {
     flex-wrap: wrap;
   }

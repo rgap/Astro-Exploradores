@@ -1,3 +1,20 @@
+const openNavButton = document.getElementById('open-nav');
+const navList = document.getElementById('nav-list');
+
+openNavButton.addEventListener('click', () => {
+    const currentLeft = parseInt(getComputedStyle(navList).left);
+    if (currentLeft < 0) {
+        navList.style.left = '0';
+    } else {
+        navList.style.left = '-80%';
+    }
+});
+
+
+
+
+
+
 function stars() {
     let count = 40;
     let scene = document.querySelector(".hero-section");
